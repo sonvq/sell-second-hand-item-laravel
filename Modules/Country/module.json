@@ -1,0 +1,17 @@
+{
+    "name": "Country",
+    "alias": "country",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 1,
+    "providers": [
+        "Modules\\Country\\Providers\\CountryServiceProvider",
+        "Modules\\Country\\Providers\\RouteServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        
+    ],
+    "requires": []
+}

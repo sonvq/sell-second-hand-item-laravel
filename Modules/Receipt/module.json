@@ -1,0 +1,17 @@
+{
+    "name": "Receipt",
+    "alias": "receipt",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 1,
+    "providers": [
+        "Modules\\Receipt\\Providers\\ReceiptServiceProvider",
+        "Modules\\Receipt\\Providers\\RouteServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        
+    ],
+    "requires": []
+}

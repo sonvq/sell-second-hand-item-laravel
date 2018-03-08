@@ -1,0 +1,17 @@
+{
+    "name": "Offer",
+    "alias": "offer",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 1,
+    "providers": [
+        "Modules\\Offer\\Providers\\OfferServiceProvider",
+        "Modules\\Offer\\Providers\\RouteServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        
+    ],
+    "requires": []
+}

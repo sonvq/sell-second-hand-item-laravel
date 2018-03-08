@@ -1,0 +1,17 @@
+{
+    "name": "Discount",
+    "alias": "discount",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 1,
+    "providers": [
+        "Modules\\Discount\\Providers\\DiscountServiceProvider",
+        "Modules\\Discount\\Providers\\RouteServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        
+    ],
+    "requires": []
+}

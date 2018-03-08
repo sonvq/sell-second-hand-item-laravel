@@ -1,0 +1,17 @@
+{
+    "name": "Message",
+    "alias": "message",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 1,
+    "providers": [
+        "Modules\\Message\\Providers\\MessageServiceProvider",
+        "Modules\\Message\\Providers\\RouteServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        
+    ],
+    "requires": []
+}

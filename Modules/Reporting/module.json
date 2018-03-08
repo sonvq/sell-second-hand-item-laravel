@@ -1,0 +1,17 @@
+{
+    "name": "Reporting",
+    "alias": "reporting",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 1,
+    "providers": [
+        "Modules\\Reporting\\Providers\\ReportingServiceProvider",
+        "Modules\\Reporting\\Providers\\RouteServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        
+    ],
+    "requires": []
+}

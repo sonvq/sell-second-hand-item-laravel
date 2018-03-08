@@ -1,0 +1,17 @@
+{
+    "name": "Appuser",
+    "alias": "appuser",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 1,
+    "providers": [
+        "Modules\\Appuser\\Providers\\AppuserServiceProvider",
+        "Modules\\Appuser\\Providers\\RouteServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        
+    ],
+    "requires": []
+}

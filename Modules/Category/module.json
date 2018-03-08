@@ -1,0 +1,17 @@
+{
+    "name": "Category",
+    "alias": "category",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 1,
+    "providers": [
+        "Modules\\Category\\Providers\\CategoryServiceProvider",
+        "Modules\\Category\\Providers\\RouteServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        
+    ],
+    "requires": []
+}

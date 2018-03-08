@@ -1,0 +1,17 @@
+{
+    "name": "Promote",
+    "alias": "promote",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 1,
+    "providers": [
+        "Modules\\Promote\\Providers\\PromoteServiceProvider",
+        "Modules\\Promote\\Providers\\RouteServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        
+    ],
+    "requires": []
+}

@@ -1,0 +1,9 @@
+php artisan module:migrate-refresh --seed country
+php artisan module:migrate-refresh --seed city
+php artisan module:migrate-refresh --seed category
+php artisan module:migrate-refresh --seed subcategory
+php artisan module:migrate-refresh --seed promote
+php artisan module:migrate-refresh --seed discount
+php artisan module:migrate-refresh --seed reporting
+
+Set role for admin user

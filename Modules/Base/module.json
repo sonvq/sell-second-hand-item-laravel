@@ -1,0 +1,18 @@
+{
+    "name": "Base",
+    "alias": "base",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 1,
+    "providers": [
+        "Modules\\Base\\Providers\\BaseServiceProvider",
+        "Modules\\Base\\Providers\\RouteServiceProvider",
+        "Modules\\Base\\Providers\\EventServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        
+    ],
+    "requires": []
+}
