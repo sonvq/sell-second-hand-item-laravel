@@ -66,7 +66,14 @@ class OfferController extends BaseController
                     Helper::MAKE_OFFER_NOT_FOUND_TITLE,
                     Helper::MAKE_OFFER_NOT_FOUND_MSG);
         }
-               
+              
+        // Check if there is already other offer accepted
+        $existingAcceptedOffer = Offer::where('item_id', $id)->where('status', Offer::STATUS_ACCEPTED)->first();
+        if ($existingAcceptedOffer) {
+            return Helper::badRequestErrorResponse(Helper::ITEM_ALREADY_OFFERED,
+                    Helper::ITEM_ALREADY_OFFERED_TITLE,
+                    Helper::ITEM_ALREADY_OFFERED_MSG);
+        }
         
         if (($offerObject->buyer_id == $currentLoggedUser->appuser_id)){
             
@@ -193,7 +200,7 @@ class OfferController extends BaseController
         if ($validate !== true) {
             return $validate;
         }
-        
+                        
         $offerObject = Offer::where('id', $id)->where('status', Offer::STATUS_PENDING)->first();
         if (!$offerObject) {
             return Helper::notFoundErrorResponse(Helper::OFFER_NOT_FOUND,
@@ -207,6 +214,14 @@ class OfferController extends BaseController
             return Helper::badRequestErrorResponse(Helper::OWNER_OF_ITEM_REQUIRED,
                     Helper::OWNER_OF_ITEM_REQUIRED_TITLE,
                     Helper::OWNER_OF_ITEM_REQUIRED_MSG);
+        }
+        
+        // Check if there is already other offer accepted
+        $existingAcceptedOffer = Offer::where('item_id', $offerObject->item_id)->where('status', Offer::STATUS_ACCEPTED)->first();
+        if ($existingAcceptedOffer) {
+            return Helper::badRequestErrorResponse(Helper::ITEM_ALREADY_OFFERED,
+                    Helper::ITEM_ALREADY_OFFERED_TITLE,
+                    Helper::ITEM_ALREADY_OFFERED_MSG);
         }
         
         $offerObject->status = $input['status'];

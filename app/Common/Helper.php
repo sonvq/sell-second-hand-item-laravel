@@ -38,6 +38,11 @@ class Helper {
     const OFFER_NOT_FOUND_TITLE = 'Error message';
     const OFFER_NOT_FOUND_MSG = 'Offer not found, has been deleted or you already accepted/declined this offer before';
     
+    const ITEM_ALREADY_OFFERED = 'ITEM_ALREADY_OFFERED';
+    const ITEM_ALREADY_OFFERED_TITLE = 'Error message';
+    const ITEM_ALREADY_OFFERED_MSG = 'This item already got an accepted offer';
+    
+    
     const MAKE_OFFER_NOT_FOUND = 'MAKE_OFFER_NOT_FOUND';
     const MAKE_OFFER_NOT_FOUND_TITLE = 'Error message';
     const MAKE_OFFER_NOT_FOUND_MSG = 'Offer not found or has been deleted';

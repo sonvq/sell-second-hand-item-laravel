@@ -85,31 +85,35 @@ class EloquentItemRepository extends EloquentBaseRepository implements ItemRepos
                 ->where('featured', 1)
                 ->limit(6);
         
-        $userHasPersonalization = false;
+//        $userHasPersonalization = false;
+//        
+//        if (!empty($appuserLogin)) {
+//            $appuserObject = $appuserLogin->appuser;
+//            if (!empty($appuserObject)) {
+//                $userPersonalization = $appuserObject->personalization_subcategory;    
+//                if (count($userPersonalization) > 0) {
+//                    $userHasPersonalization = true;
+//                }
+//            }
+//        }
+//        
+//        if ($userHasPersonalization) {
+//            // Then query by user personalization
+//            $arrPersonalize = $userPersonalization->pluck('id')->toArray();            
+//            $arrPersonalizeRest = Subcategory::whereNotIn('id', $arrPersonalize)->pluck('id')->toArray();
+//            
+//            $arrAllSub = array_merge($arrPersonalize, $arrPersonalizeRest);            
+//            $strAllSub = implode(', ', $arrAllSub);            
+//            
+//            $query = $query->orderByRaw("FIELD(subcategory_id, $strAllSub)");
+//        } else {
+//            // Randomly displayed item
+//            $query = $query->inRandomOrder();
+//        }
         
-        if (!empty($appuserLogin)) {
-            $appuserObject = $appuserLogin->appuser;
-            if (!empty($appuserObject)) {
-                $userPersonalization = $appuserObject->personalization_subcategory;    
-                if (count($userPersonalization) > 0) {
-                    $userHasPersonalization = true;
-                }
-            }
-        }
-        
-        if ($userHasPersonalization) {
-            // Then query by user personalization
-            $arrPersonalize = $userPersonalization->pluck('id')->toArray();            
-            $arrPersonalizeRest = Subcategory::whereNotIn('id', $arrPersonalize)->pluck('id')->toArray();
+        // Randomly displayed item
+        $query = $query->inRandomOrder();
             
-            $arrAllSub = array_merge($arrPersonalize, $arrPersonalizeRest);            
-            $strAllSub = implode(', ', $arrAllSub);            
-            
-            $query = $query->orderByRaw("FIELD(subcategory_id, $strAllSub)");
-        } else {
-            // Randomly displayed item
-            $query = $query->inRandomOrder();
-        }
         return $query->get();
     }
     
@@ -130,32 +134,35 @@ class EloquentItemRepository extends EloquentBaseRepository implements ItemRepos
             });
         }
         
-        $userHasPersonalization = false;
-        
-        if (!empty($appuserLogin)) {
-            $appuserObject = $appuserLogin->appuser;
-            if (!empty($appuserObject)) {
-                $userPersonalization = $appuserObject->personalization_subcategory;    
-                if (count($userPersonalization) > 0) {
-                    $userHasPersonalization = true;
-                }
-            }
-        }
-        
-        if ($userHasPersonalization) {
-            // Then query by user personalization
-            $arrPersonalize = $userPersonalization->pluck('id')->toArray();            
-            $arrPersonalizeRest = Subcategory::whereNotIn('id', $arrPersonalize)->pluck('id')->toArray();
-            
-            $arrAllSub = array_merge($arrPersonalize, $arrPersonalizeRest);            
-            $strAllSub = implode(', ', $arrAllSub);            
-            
-            $query = $query->orderByRaw("FIELD(subcategory_id, $strAllSub)");
-        } else {
-            // Randomly displayed item
-            $query = $query->inRandomOrder();
-        }
+//        $userHasPersonalization = false;
+//        
+//        if (!empty($appuserLogin)) {
+//            $appuserObject = $appuserLogin->appuser;
+//            if (!empty($appuserObject)) {
+//                $userPersonalization = $appuserObject->personalization_subcategory;    
+//                if (count($userPersonalization) > 0) {
+//                    $userHasPersonalization = true;
+//                }
+//            }
+//        }
+//        
+//        if ($userHasPersonalization) {
+//            // Then query by user personalization
+//            $arrPersonalize = $userPersonalization->pluck('id')->toArray();            
+//            $arrPersonalizeRest = Subcategory::whereNotIn('id', $arrPersonalize)->pluck('id')->toArray();
+//            
+//            $arrAllSub = array_merge($arrPersonalize, $arrPersonalizeRest);            
+//            $strAllSub = implode(', ', $arrAllSub);            
+//            
+//            $query = $query->orderByRaw("FIELD(subcategory_id, $strAllSub)");
+//        } else {
+//            // Randomly displayed item
+//            $query = $query->inRandomOrder();
+//        }
 
+        // Randomly displayed item
+        $query = $query->inRandomOrder();
+            
         return $query->get();
     }
     
