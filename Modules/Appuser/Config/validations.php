@@ -33,7 +33,8 @@ return [
             'country_id' => 'required|exists:country__countries,id'
         ],
         'messages' => [
-            'password.regex' => 'Password need at least one capital, one special, between 6 and 12 character'
+            'password.regex' => 'Password need at least one capital, one special, between 6 and 12 character',
+            'email.max' => 'Email address cannot be longer than 30 characters.'
         ]
     ],    
     

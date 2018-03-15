@@ -121,7 +121,8 @@ class AppuserController extends BaseController
             'avatar' => 'integer|exists:media__files,id',
         ];
         $messages = [
-            'password.regex' => 'Password need at least one capital, one special, between 6 and 12 character'
+            'password.regex' => 'Password need at least one capital, one special, between 6 and 12 character',
+            'email.max' => 'Email address cannot be longer than 30 characters.'
         ];
         
         $validator = Validator::make($input, $rules, $messages);

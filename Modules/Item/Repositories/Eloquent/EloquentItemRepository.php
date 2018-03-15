@@ -293,14 +293,18 @@ class EloquentItemRepository extends EloquentBaseRepository implements ItemRepos
             if ($input['sort'] == 'date') {
                 $query = $query->orderBy('created_at', 'desc');
             } else if ($input['sort'] == 'featured') {
-                $query = $query->orderBy('featured', 'desc');
+                $query = $query->orderBy('featured', 'desc')->orderBy('created_at', 'desc');
             } else if ($input['sort'] == 'discount') {
                 $query = $query->orderBy('discount_percent', 'desc');
             } else if ($input['sort'] == 'low_to_high_price') {
                 $query = $query->orderBy('discount_price_number', 'asc');
             } else if ($input['sort'] == 'high_to_low_price') {
                 $query = $query->orderBy('discount_price_number', 'desc');
+            } else {
+                $query = $query->orderBy('featured', 'desc')->orderBy('created_at', 'desc');    
             }
+        } else {
+            $query = $query->orderBy('featured', 'desc')->orderBy('created_at', 'desc');
         }
         
 
